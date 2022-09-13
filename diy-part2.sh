@@ -37,18 +37,10 @@ curl -fsSL  https://raw.githubusercontent.com/ywt114/poweroff/main/system.lua > 
 cd package/lean
 git clone https://github.com/ywt114/luci-app-advanced
 git clone https://github.com/sbwml/luci-app-alist
-git clone https://github.com/fw876/helloworld
-git clone https://github.com/vernesong/OpenClash
-git clone https://github.com/xiaorouji/openwrt-passwall
-git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/luci-app-passwall/ ./openwrt-passwall/
-mv openwrt-packages/luci-app-eqos/ ./
-mv openwrt-packages/luci-app-store/ ./
-mv openwrt-packages/luci-lib-taskd/ ./
-mv openwrt-packages/luci-lib-xterm/ ./
-mv openwrt-packages/taskd/ ./
-rm -rf openwrt-packages/
 git clone https://github.com/xiangfeidexiaohuo/openwrt-packages
+mv openwrt-packages/luci-app-eqos/ ./
 mv openwrt-packages/op-homebox/ ./
 mv openwrt-packages/op-socat/ ./
 rm -rf openwrt-packages/
+git clone https://github.com/linkease/istore
+sed -i 's/+luci-lib-ipkg/+luci-base/g' istore/luci/luci-app-store/Makefile
